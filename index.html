@@ -133,7 +133,7 @@
       data = json.data;
       
       ['good', 'bad', 'confusing'].forEach(cat => {
-        const items = data.filter(d => d.category.toLowerCase() === cat);
+        const items = data.filter(d => d.category.toLowerCase().includes(cat));
         
         document.getElementById(`gal-${cat}`).innerHTML = items.length ? items.map(i => `
           <div class="card" id="card-${i.id}">
