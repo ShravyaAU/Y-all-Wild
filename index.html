@@ -202,11 +202,6 @@
     
     // Check if any category is missing votes
     const v = votes;
-    if (!v.good[1] || !v.good[2] || !v.good[3] || 
-        !v.bad[1] || !v.bad[2] || !v.bad[3] || 
-        !v.confusing[1] || !v.confusing[2] || !v.confusing[3]) {
-      return alert("Please review your selections. You must pick a 1st, 2nd, and 3rd place in all three categories.");
-    }
 
     const payload = {
       email: email,
